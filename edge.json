@@ -1,0 +1,213 @@
+{
+    "version": "1.0",
+    "envConfig": {
+        "sandbox": {
+            "targetServers": [{
+                    "name": "B2X_Lithuania_Lead_Documents_V1_TS",
+                    "host": "mocktarget.apigee.net",
+                    "isEnabled": true,
+                    "port": 443,
+                    "sSLInfo": {
+                        "enabled": "true",
+                        "clientAuthEnabled": "false",
+                        "ignoreValidationErrors": "false"
+                    }
+                }
+            ],
+            "caches": [],
+            "kvms": [
+              {
+                "name": "B2X_Lithuania_Lead_Documents_V1_SECRET_KVM",
+                "encrypted": true,
+                "entry": [
+                  {
+                    "name": "ANSWER",
+                    "value": "{ANSWER_TO_EVERYTHING}"
+                  }
+                ]
+              },
+              {
+                "name": "B2X_Lithuania_Lead_Documents_V1_KVM",
+                "entry": [
+                  {
+                    "name": "COMPANY",
+                    "value": "Telia Company"
+                  }
+                ]
+              }
+            ]
+        },
+        "dev": {
+            "targetServers": [{
+                    "name": "B2X_Lithuania_Lead_Documents_V1_TS",
+                    "host": "mocktarget.apigee.net",
+                    "isEnabled": true,
+                    "port": 443,
+                    "sSLInfo": {
+                        "enabled": "true",
+                        "clientAuthEnabled": "false",
+                        "ignoreValidationErrors": "false"
+                    }
+                }
+            ],
+            "caches": [],
+            "kvms": [
+              {
+                "name": "B2X_Lithuania_Lead_Documents_V1_SECRET_KVM",
+                "encrypted": true,
+                "entry": [
+                  {
+                    "name": "ANSWER",
+                    "value": "{ANSWER_TO_EVERYTHING}"
+                  }
+                ]
+              },
+              {
+                "name": "B2X_Lithuania_Lead_Documents_V1_KVM",
+                "entry": [
+                  {
+                    "name": "COMPANY",
+                    "value": "Telia Company"
+                  }
+                ]
+              }
+            ]
+        },
+        "test": {
+          "targetServers": [{
+            "name": "B2X_Lithuania_Lead_Documents_V1_TS",
+            "host": "mocktarget.apigee.net",
+            "isEnabled": true,
+            "port": 443,
+            "sSLInfo": {
+              "enabled": "true",
+              "clientAuthEnabled": "false",
+              "ignoreValidationErrors": "false"
+            }
+          }
+          ],
+          "caches": [],
+          "kvms": [
+            {
+              "name": "B2X_Lithuania_Lead_Documents_V1_SECRET_KVM",
+              "encrypted": true,
+              "entry": [
+                {
+                  "name": "ANSWER",
+                  "value": "{ANSWER_TO_EVERYTHING}"
+                }
+              ]
+            },
+            {
+              "name": "B2X_Lithuania_Lead_Documents_V1_KVM",
+              "entry": [
+                {
+                  "name": "COMPANY",
+                  "value": "Telia Company"
+                }
+              ]
+            }
+          ]
+        },
+        "uat": {
+          "targetServers": [{
+            "name": "B2X_Lithuania_Lead_Documents_V1_TS",
+            "host": "mocktarget.apigee.net",
+            "isEnabled": true,
+            "port": 443,
+            "sSLInfo": {
+              "enabled": "true",
+              "clientAuthEnabled": "false",
+              "ignoreValidationErrors": "false"
+            }
+          }
+          ],
+          "caches": [],
+          "kvms": [
+            {
+              "name": "B2X_Lithuania_Lead_Documents_V1_SECRET_KVM",
+              "encrypted": true,
+              "entry": [
+                {
+                  "name": "ANSWER",
+                  "value": "{ANSWER_TO_EVERYTHING}"
+                }
+              ]
+            },
+            {
+              "name": "B2X_Lithuania_Lead_Documents_V1_KVM",
+              "entry": [
+                {
+                  "name": "COMPANY",
+                  "value": "Telia Company"
+                }
+              ]
+            }
+          ]
+        },
+        "prod": {
+          "targetServers": [{
+            "name": "B2X_Lithuania_Lead_Documents_V1_TS",
+            "host": "mocktarget.apigee.net",
+            "isEnabled": true,
+            "port": 443,
+            "sSLInfo": {
+              "enabled": "true",
+              "clientAuthEnabled": "false",
+              "ignoreValidationErrors": "false"
+            }
+          }
+          ],
+          "caches": [],
+          "kvms": [
+            {
+              "name": "B2X_Lithuania_Lead_Documents_V1_SECRET_KVM",
+              "encrypted": true,
+              "entry": [
+                {
+                  "name": "ANSWER",
+                  "value": "{ANSWER_TO_EVERYTHING}"
+                }
+              ]
+            },
+            {
+              "name": "B2X_Lithuania_Lead_Documents_V1_KVM",
+              "entry": [
+                {
+                  "name": "COMPANY",
+                  "value": "Telia Company"
+                }
+              ]
+            }
+          ]
+        }
+    },
+    "orgConfig": {
+      "apiProducts": [
+        {
+          "name": "B2X_Lithuania_Lead_Documents_V1_Product",
+          "apiResources": [
+            "/",
+            "/**"
+          ],
+          "approvalType": "manual",
+          "attributes": [{
+            "name": "access",
+            "value": "private"
+          }],
+          "description": "B2X_Lithuania_Lead_Documents_V1 - Distribution product",
+          "displayName": "B2X_Lithuania_Lead_Documents_V1",
+          "environments": [
+            "sandbox","dev","test","uat","prod"
+          ],
+          "proxies": [
+            "B2X_Lithuania_Lead_Documents_V1"
+          ],
+          "quota": "1000",
+          "quotaInterval": "1",
+          "quotaTimeUnit": "day",
+          "scopes": []
+        }
+      ]
+    }
+}

@@ -1,0 +1,22 @@
+name: Development - Deploy to dev environment
+on:
+  workflow_dispatch:
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Package proxy into a ZIP archive and send to the Deployment API
+        env:
+          ANSWER_TO_EVERYTHING: ${{ secrets.ANSWER_TO_EVERYTHING }}
+          DEPLOYMENT_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
+        run: |
+          sed -i "s/{ANSWER_TO_EVERYTHING}/$ANSWER_TO_EVERYTHING/g" edge.json
+          mkdir deployment
+          cp ./edge.json ./deployment
+          cp -r ./apiproxy ./deployment/apiproxy
+          cd ./deployment
+          zip -qq -r ./apigee-proxy-sample.zip .
+          unzip -l ./apigee-proxy-sample.zip
+          curl --location -i --request PUT "https://api-garden.teliacompany.com/B2X_Global_Apigarden-Pipeline_V1/env/dev/projects/B2X_Lithuania_Lead_Documents_V1" --header "Authorization: $DEPLOYMENT_TOKEN" --header "Content-Type: application/zip" --data-binary "@apigee-proxy-sample.zip"
+          curl --location --fail --request GET "https://api-garden.teliacompany.com/B2X_Global_Apigarden-Pipeline_V1/env/dev/projects/B2X_Lithuania_Lead_Documents_V1" --header "Authorization: $DEPLOYMENT_TOKEN"

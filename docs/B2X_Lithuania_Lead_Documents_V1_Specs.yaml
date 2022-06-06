@@ -1,0 +1,89 @@
+openapi: 3.0.2
+x-project-id: B2X_Lithuania_Lead_Documents_V1
+info:
+  version: '1.0.0'
+  title: 'B2X_Lithuania_Lead_Documents_V1'
+  description: |
+    Please explain what B2X_Lithuania_Lead_Documents_V1 provides and why to use it.
+    ## Authentication
+    Please explain: 
+    - How an authentication/authorization works for the B2X_Lithuania_Lead_Documents_V1? 
+    - List all the steps needed for using B2X_Lithuania_Lead_Documents_V1. 
+    ## Examples
+    ```
+    echo "hello from B2X_Lithuania_Lead_Documents_V1"
+    ```
+    ## Diagrams
+    Proin auctor aliquet mauris. Integer congue, sem rhoncus iaculis tempor, lacus ante volutpat nibh, ut interdum ipsum augue et quam. Nulla nec nibh libero. Vivamus suscipit diam non felis commodo varius. Nunc sed nunc vel odio feugiat cursus in quis enim. Nunc viverra mi ac luctus finibus. Etiam consequat congue dolor in varius. Mauris fermentum odio diam, eget tempor magna vestibulum a. Curabitur gravida lacus et lacinia sagittis. Pellentesque hendrerit orci sed ex posuere accumsan. Phasellus ac ipsum sem. Maecenas auctor mollis velit, vitae tincidunt nisi rhoncus non. 
+
+    ![Apigee Flows](https://docs.apigee.com/api-platform/images/ProxyToBackendWithFlows_v3.png)
+  
+servers:
+  - url: 'https://api-garden.teliacompany.com//B2X_Lithuania_Lead_Documents_V1,'
+    description: Production
+  - url: 'https://{environment}.api-garden.teliacompany.com//B2X_Lithuania_Lead_Documents_V1,'
+    description: Development
+    variables:
+      environment:
+        default: dev
+        description: Development environment
+        enum:
+          - dev
+          - test
+          - uat
+paths:
+  /hello:
+    get:
+      summary: Sample request
+      operationId: getHello
+      security:
+        - Apigarden: []
+      tags:
+        - Hello World
+      responses:
+        '200':
+          description: Hello
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Hello'
+        '401':
+          description: 'Unauthorized - you need to request and provide correct OAuth2 token, in order to make requests towards this API'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+components:
+  schemas:
+    Hello:
+      title: example schema
+      properties:
+        key:
+          type: string
+        value:
+          type: string
+    ErrorResponse:
+      title: The error message your API provides and what to be done when facing the response?
+      properties:
+        Error:
+          $ref: '#/components/schemas/Error'
+    Error:
+      title: Object containing error information
+      properties:
+        code:
+          description: Error code
+          type: integer
+          format: int64
+        message:
+          description: Error description
+          type: string
+        state:
+          description: State
+          type: string
+  securitySchemes:
+    Apigarden:
+      type: oauth2
+      flows:
+        clientCredentials:
+          tokenUrl: 'https://dev.api-garden.teliacompany.com/v3/oauth/client_credential/accesstoken'
+          scopes: {}
