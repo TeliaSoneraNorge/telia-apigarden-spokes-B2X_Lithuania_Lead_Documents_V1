@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<BasicAuthentication async="false" continueOnError="false" enabled="true" name="SetBasicAuthenticationTargetPing">
+    <DisplayName>SetBasicAuthenticationTargetPing</DisplayName>
+    <Operation>Encode</Operation>
+    <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+    <User ref="private.username_ping"/>
+    <Password ref="private.password_ping"/>
+    <AssignTo createNew="true">request.header.Authorization</AssignTo>
+    <Source>request.header.Authorization</Source>
+</BasicAuthentication>

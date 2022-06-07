@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="AccessEntity" version="SHA-512:15652b32e0ea76d2f6a9ec99893c1efa4b45d69a0acf4d3d0841014ca244b1beb7c51b9aa11f653ec1c7afdffd886e47517328e6332ecb15449ac7611c724821"/>
+        <VersionInfo resourceName="AddCors" version="SHA-512:4146514238421ad652de4c995234abf03087129d9e2e3c5610c27163d06f1b915871dbdffbe933ea0e9f7eaf0ac9ce99b12ec9d8a6e679b9f0cd536e2d68802d"/>
+        <VersionInfo resourceName="AssignHeader" version="SHA-512:eb0fd04caadbb798100a4f00efb1228323dcac1653a53ec37716e778a87b2e35af9c57eeade96220f0595d311eb84758a9395a5ac34160c4e86e297ac535eb75"/>
+        <VersionInfo resourceName="BasicAuthentication" version="SHA-512:869a3a81d489d7c22a846621712d876d31e8b3e639ef2b32a786005ac8208a16ef998f7b8379a2917c13e81ee11f4297beeb64961855debca15c9244c15f0d86"/>
+        <VersionInfo resourceName="Error_BadRequest" version="SHA-512:ea4301481c754523acd6835c9adc49bd8babf09e30d136a5c9169924c9e589a508a427444c96b0c29edb3a8427c150c20ea1a17ba806b63ec33bd1c5eef26fbb"/>
+        <VersionInfo resourceName="ExtractVariables" version="SHA-512:c4971a80ded85b9d8a10f1d28dfb391d9554390410196a2bd0b83f310a7bddf56f4b087a10543a7e1ab0f88846cd4c8e46f1580a00c3ecbddc4f8a6456e539ca"/>
+        <VersionInfo resourceName="GetCredentialConfigPing" version="SHA-512:4edda87cc89238e387d78aede0c7994bd78ff62d5e0968063b80c8a652bf2602211db5e4e57eaed0c97d3d325efaf1dc15a01033355a6434389289ef0174abc2"/>
+        <VersionInfo resourceName="GetKVMConfig" version="SHA-512:02c4186f013076dcaf676bc70f1f303ca72e8964628a7277cc9b720cb4abbb2f765e52c5f52eb79420dd018a1735ddd8816d87d4f6bf23316a3298264c268bb6"/>
+        <VersionInfo resourceName="HandleFault_Shared_Flow" version="SHA-512:03867658bc4d01e8a698a7a8f262ca7a36261fa64f80e96cd3bd948040acff8f132b8d5aea2b9f1801afcfd27c35968a610650a384350f1b3691e3bc22ecf237"/>
+        <VersionInfo resourceName="RemoveApikey" version="SHA-512:b1257431f5ac61fce0a966a4730f12aaf94797dbef4e337f4c5004aa404c5bac4e86dd97e49e49fef40faadadedaaac98e0c603041940d71b397f440984e791c"/>
+        <VersionInfo resourceName="RemoveHeaders" version="SHA-512:ffbdf04cc16eab25ee68f9bb0243f12b55980dab4ff1b9a4a779e5e9166bc2e0ae9531204cbaaaa4ff1f973d8ab530d25c0bb8213d3ea726a7e5c3b7c9e92d61"/>
+        <VersionInfo resourceName="RemoveSuffix" version="SHA-512:e20426a7b588d79042fdc3c1b9833bdb0dd27ecee2900fba50fb7ab6bbbfc19615c0f9fa4c3161fdd0ab66e117619585efad39a950d8517dcddb0f0ba120f12d"/>
+        <VersionInfo resourceName="Set-Flow-Vars" version="SHA-512:339c2e8e475bdc2a05d5c4be5a9ffe057e9105897e9f72d226eb93bb96e8c11c91ddb21a13c596c15f9018c7e69623b212127d8d8df605864f5e151635f4c490"/>
+        <VersionInfo resourceName="SetBasicAuthenticationTargetPing" version="SHA-512:961bdced48f345a2ec91e9707f622e9924723fb8e0ef74ad8d23fd39f48bbe81ecad2084780d80dfe5c884e6cf5b6c31c8309a9ed19ede1f2bdaf3c2a7f264e2"/>
+        <VersionInfo resourceName="SpikeArrest" version="SHA-512:7e2d9bf288e9d6e7a7cdd705e075736975d2745f821eafe5774d5dcda106646e18bfc23805106f2da6254157b124459b7a160dca08807324d4c7eb7a7126cd74"/>
+        <VersionInfo resourceName="Verify-APIKEY" version="SHA-512:77dc22b051cd57d6b9ffb42b95d69a0e58124f199a32492446455525ff7de907ab37a33644bde25d1530ce9dadbe9cb7330cda3bbb73c04f529a4ea0a70d291d"/>
+        <VersionInfo resourceName="WAF-reject-handler" version="SHA-512:5075792b35df02bd61894f1ea94faa7282e83c6f4389a47df04ac673b74195c2f464df29755cf326b5dccdbcc03a6679e48fa264138c26cc782d6777861d783a"/>
+        <VersionInfo resourceName="verify_oauth" version="SHA-512:186d4185d035b64dc882ca51817e2a2870ba4ec75e640a906a4a732504f36c8d9ba291db7dcb984c65d32a2e583394644c95937d3e548bddd2643a12c4ab8fcd"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:7edc6fbbc39d8fc44d3a64b5b6addca64403e48c97dddc2c61df125da3ba8e7663bcfda09d148b407e7c4a962ce5d59435e03bb96e975af2111dda66761ba073"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="jsc://waf_reject_handler.js" version="SHA-512:d80c3176388d0d8db13f020a702ec61104af70aa6bcb525a86bd8dd532ed66a7904bdcd0e8b9b9540fde3a3b1df742a3483a5753efda08afd3f92733e3a7d548"/>
+        <VersionInfo resourceName="openapi://association.json" version="SHA-512:0724701c4b509f0f88ae31d970e7da1f00ee4aaa9c97c50bdbae65ae83d23acc338f17d975fbc09b10f209de4906ee7267e1f91e022f57805aca30dc4f8235cf"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="TargetEndpoint-Ping" version="SHA-512:9948037c82f58148e5f8986d274c6e62c5b34b687aa8cbfbab3b9d1066c9eeee4721813cdb092aa474e82c14df62ce3e3795b1928f9628e4986d9c21718c2202"/>
+        <VersionInfo resourceName="default" version="SHA-512:ebda1ee06eff2403ea45181c7497b787593fb025f825ca6d31a80bf7ddc6169b1ca2e6c4cf0d57ad3c32613c0cb6078762c1ef7d371cba5f13cecb0556121660"/>
+    </TargetEndpoints>
+</Manifest>

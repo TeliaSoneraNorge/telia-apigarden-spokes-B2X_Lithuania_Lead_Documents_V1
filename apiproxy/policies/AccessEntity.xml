@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AccessEntity async="false" continueOnError="false" enabled="true" name="AccessEntity">
+    <DisplayName>AccessEntity</DisplayName>
+    <EntityType value="app"/>
+    <EntityIdentifier type="consumerkey" ref="client_id"/>
+</AccessEntity>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="ExtractVariables">
+    <DisplayName>ExtractVariables</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source>AccessEntity.AccessEntity</Source>
+    <XMLPayload stopPayloadProcessing="false">
+        <Namespaces/>
+        <Variable name="clientCodes" type="string">
+            <XPath>/App/Attributes/Attribute[Name='clientCodes']/Value/text()</XPath>
+        </Variable>
+        <Variable name="dealerCode" type="string">
+            <XPath>/App/Attributes/Attribute[Name='dealerCode']/Value/text()</XPath>
+        </Variable>
+    </XMLPayload>
+</ExtractVariables>

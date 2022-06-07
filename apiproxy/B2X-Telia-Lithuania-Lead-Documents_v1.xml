@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="B2X-Telia-Lithuania-Lead-Documents_v1">
+    <Basepaths>/b2x-telia-lithuania-lead-documents/v1</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1636097759426</CreatedAt>
+    <CreatedBy>tomas.bandza@telia.lt</CreatedBy>
+    <Description>API Proxy for direct integration with Telia Lithuania Mobility Lead Document services.</Description>
+    <DisplayName>B2X-Telia-Lithuania-Lead-Documents version 1</DisplayName>
+    <LastModifiedAt>1636097759426</LastModifiedAt>
+    <LastModifiedBy>tomas.bandza@telia.lt</LastModifiedBy>
+    <ManifestVersion>SHA-512:0635bbe9593e6d20048abeacb967c3ee59b00c16e3b18fc8130fd216a6f051f5bd0afc526788e989579661744cd41bc999ce4a42ab3fae30a9be7d4c08a93129:eu-west-1</ManifestVersion>
+    <Policies>
+        <Policy>AccessEntity</Policy>
+        <Policy>AddCors</Policy>
+        <Policy>AssignHeader</Policy>
+        <Policy>BasicAuthentication</Policy>
+        <Policy>Error_BadRequest</Policy>
+        <Policy>ExtractVariables</Policy>
+        <Policy>GetCredentialConfigPing</Policy>
+        <Policy>GetKVMConfig</Policy>
+        <Policy>HandleFault_Shared_Flow</Policy>
+        <Policy>RemoveApikey</Policy>
+        <Policy>RemoveHeaders</Policy>
+        <Policy>RemoveSuffix</Policy>
+        <Policy>SetBasicAuthenticationTargetPing</Policy>
+        <Policy>SpikeArrest</Policy>
+        <Policy>Verify-APIKEY</Policy>
+        <Policy>WAF-reject-handler</Policy>
+        <Policy>verify_oauth</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>openapi://association.json</Resource>
+        <Resource>jsc://waf_reject_handler.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>TargetEndpoint-Ping</TargetEndpoint>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

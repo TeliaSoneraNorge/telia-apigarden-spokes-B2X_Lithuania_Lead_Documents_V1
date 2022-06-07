@@ -1,15 +1,9 @@
-<!--
-    To activate logging:
-        1. Change assigment of apig.sendLogsTo from "null" to "apigarden-myteam-prod", where "apigarden-myteam-prod" is the ID of your log.
-        2. apig.logLevel is set to "info" (basic information, all requests/responses). Other levels are "warn", "error", "debug", "trace".
-        3. Enable the policy by changing " value from "false" to "true"
--->
-
-<AssignMessage name="Set-Flow-Vars" enabled="false" continueOnError="true" async="false">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage name="Set-Flow-Vars" enabled="true" continueOnError="false" async="false">
     <DisplayName>Set Flow Vars</DisplayName>
     <AssignVariable>
         <Name>apig.sendLogsTo</Name>
-        <Value>null</Value>
+        <Value>ltdocs-logs-splunk-se</Value>
     </AssignVariable>
     <AssignVariable>
         <Name>apig.logLevel</Name>

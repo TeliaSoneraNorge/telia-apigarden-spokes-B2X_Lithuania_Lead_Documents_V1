@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AssignHeader">
+    <DisplayName>AssignHeader</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <Add>
+        <Headers>
+            <Header name="guid">{messageid}</Header>
+        </Headers>
+    </Add>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

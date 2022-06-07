@@ -1,5 +1,0 @@
-<OAuthV2 async="false" continueOnError="false" enabled="true" name="Verify-oAuth-V2">
-    <DisplayName>Verify oAuth V2</DisplayName>
-    <Operation>VerifyAccessToken</Operation>
-    <AccessTokenPrefix>Bearer</AccessTokenPrefix> <!-- Optional, default is Bearer -->
-</OAuthV2>

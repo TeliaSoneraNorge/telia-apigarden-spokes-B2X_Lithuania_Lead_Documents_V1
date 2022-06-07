@@ -1,27 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<TargetEndpoint name="default">
+<TargetEndpoint name="TargetEndpoint-Ping">
     <Description/>
     <FaultRules/>
     <PreFlow name="PreFlow">
         <Request>
             <Step>
-                <Name>RemoveHeaders</Name>
+                <Name>RemoveApikey</Name>
             </Step>
             <Step>
-                <Name>AssignHeader</Name>
+                <Name>RemoveSuffix</Name>
             </Step>
             <Step>
-                <Name>GetKVMConfig</Name>
+                <Name>GetCredentialConfigPing</Name>
             </Step>
             <Step>
-                <Name>BasicAuthentication</Name>
+                <Name>SetBasicAuthenticationTargetPing</Name>
             </Step>
         </Request>
-        <Response>
-            <Step>
-                <Name>AddCors</Name>
-            </Step>
-        </Response>
+        <Response/>
     </PreFlow>
     <PostFlow name="PostFlow">
         <Request/>
@@ -31,8 +27,8 @@
     <HTTPTargetConnection>
         <Properties/>
         <LoadBalancer>
-            <Server name="B2X-Telia-Lithuania-Lead-Documents_v1_TS"/>
+            <Server name="B2B-Telia-Lithuania-Mobility-Management_v1_TS"/>
         </LoadBalancer>
-        <Path>lead-documents-v1</Path>
+        <Path>lead-documents-v1/monitoring/health</Path>
     </HTTPTargetConnection>
 </TargetEndpoint>
