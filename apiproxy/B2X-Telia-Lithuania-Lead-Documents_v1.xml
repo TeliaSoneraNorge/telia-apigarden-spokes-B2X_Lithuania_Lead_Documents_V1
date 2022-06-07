@@ -22,6 +22,7 @@
         <Policy>RemoveApikey</Policy>
         <Policy>RemoveHeaders</Policy>
         <Policy>RemoveSuffix</Policy>
+        <Policy>Set-Flow-Vars</Policy>
         <Policy>SetBasicAuthenticationTargetPing</Policy>
         <Policy>SpikeArrest</Policy>
         <Policy>Verify-APIKEY</Policy>
