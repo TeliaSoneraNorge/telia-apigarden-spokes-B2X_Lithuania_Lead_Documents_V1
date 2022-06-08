@@ -8,10 +8,16 @@ jobs:
       - uses: actions/checkout@v2
       - name: Package proxy into a ZIP archive and send to the Deployment API
         env:
-          ANSWER_TO_EVERYTHING: ${{ secrets.ANSWER_TO_EVERYTHING }}
+          username: ${{ secrets.username }}
+          password: ${{ secrets.password }}
+          username_ping: ${{ secrets.username_ping }}
+          password_ping: ${{ secrets.password_ping }}
           DEPLOYMENT_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
         run: |
-          sed -i "s/{ANSWER_TO_EVERYTHING}/$ANSWER_TO_EVERYTHING/g" edge.json
+          sed -i "s/{username}/$username/g" edge.json
+          sed -i "s/{password}/$password/g" edge.json
+          sed -i "s/{username_ping}/$username_ping/g" edge.json
+          sed -i "s/{password_ping}/$password_ping/g" edge.json
           mkdir deployment
           cp ./edge.json ./deployment
           cp -r ./apiproxy ./deployment/apiproxy

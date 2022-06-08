@@ -75,8 +75,8 @@
         },
         "test": {
           "targetServers": [{
-            "name": "B2X_Lithuania_Lead_Documents_V1_TS",
-            "host": "mocktarget.apigee.net",
+            "name": "B2X-Telia-Lithuania-Lead-Documents_v1_TS",
+            "host": "test-apiproxy.telia.lt",
             "isEnabled": true,
             "port": 443,
             "sSLInfo": {
@@ -147,35 +147,40 @@
         },
         "prod": {
           "targetServers": [{
-            "name": "B2X_Lithuania_Lead_Documents_V1_TS",
-            "host": "mocktarget.apigee.net",
+            "name": "B2B-Telia-Lithuania-Mobility-Management_v1_TS",
+            "host": "apiproxy.telia.lt",
             "isEnabled": true,
             "port": 443,
             "sSLInfo": {
               "enabled": "true",
-              "clientAuthEnabled": "false",
-              "ignoreValidationErrors": "false"
+              "clientAuthEnabled": "true",
+              "ignoreValidationErrors": "false",
+              "keyStore": "ref://api-garden-prod-v2",
+              "keyAlias": ""
             }
           }
           ],
           "caches": [],
           "kvms": [
             {
-              "name": "B2X_Lithuania_Lead_Documents_V1_SECRET_KVM",
+              "name": "B2X-Telia-Lithuania-Lead-Documents_v1_Credential_Map",
               "encrypted": true,
               "entry": [
                 {
-                  "name": "ANSWER",
-                  "value": "{ANSWER_TO_EVERYTHING}"
-                }
-              ]
-            },
-            {
-              "name": "B2X_Lithuania_Lead_Documents_V1_KVM",
-              "entry": [
+                  "name": "username", 
+                  "value": "{username}" 
+                },
                 {
-                  "name": "COMPANY",
-                  "value": "Telia Company"
+                  "name": "password",
+                  "value": "{password}"
+                },
+                {
+                  "name": "username_ping",
+                  "value": "{username_ping}"
+                },
+                {
+                  "name": "password_ping",
+                  "value": "{password_ping}"
                 }
               ]
             }
@@ -185,27 +190,66 @@
     "orgConfig": {
       "apiProducts": [
         {
-          "name": "B2X_Lithuania_Lead_Documents_V1_Product",
+          "name": "B2X-Telia-Lithuania-Lead-Documents_v1_DEV",
           "apiResources": [
             "/",
             "/**"
           ],
-          "approvalType": "manual",
+          "approvalType": "auto",
           "attributes": [{
             "name": "access",
             "value": "private"
           }],
-          "description": "B2X_Lithuania_Lead_Documents_V1 - Distribution product",
-          "displayName": "B2X_Lithuania_Lead_Documents_V1",
+          "description": "",
+          "displayName": "B2X-Telia-Lithuania-Lead-Documents_v1_DEV",
           "environments": [
-            "sandbox","dev","test","uat","prod"
+            "dev"
           ],
           "proxies": [
-            "B2X_Lithuania_Lead_Documents_V1"
+            "B2X-Telia-Lithuania-Lead-Documents_v1"
           ],
-          "quota": "1000",
-          "quotaInterval": "1",
-          "quotaTimeUnit": "day",
+          "scopes": []
+        },
+        {
+          "name": "B2X-Telia-Lithuania-Lead-Documents_v1_TEST",
+          "apiResources": [
+            "/",
+            "/**"
+          ],
+          "approvalType": "auto",
+          "attributes": [{
+            "name": "access",
+            "value": "private"
+          }],
+          "description": "",
+          "displayName": "B2X-Telia-Lithuania-Lead-Documents_v1_TEST",
+          "environments": [
+            "test"
+          ],
+          "proxies": [
+            "B2X-Telia-Lithuania-Lead-Documents_v1"
+          ],
+          "scopes": []
+        },
+        {
+          "name": "B2X-Telia-Lithuania-Lead-Documents_v1_Product",
+          "apiResources": [
+            "/",
+            "/**"
+          ],
+          "approvalType": "auto",
+          "attributes": [{
+            "name": "access",
+            "value": "public"
+          }],
+          "description": "",
+          "displayName": "B2X-Telia-Lithuania-Lead-Documents_v1_Product",
+          "environments": [
+            "prod"
+          ],
+          "proxies": [
+            "B2X-Telia-Lithuania-Lead-Documents_v1"
+          ],
           "scopes": []
         }
       ]

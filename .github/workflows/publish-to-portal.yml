@@ -25,4 +25,4 @@ jobs:
         env:
           PORTAL_PUBLISHER_TOKEN_URL: ${{ secrets.PORTAL_PUBLISHER_TOKEN_URL }}
         run: |
-          curl -vvv -X POST -H 'Content-Type: application/yaml' --fail --data-binary @docs/B2X_Lithuania_Lead_Documents_V1_Specs.yaml "$PORTAL_PUBLISHER_TOKEN_URL"
+          curl -vvv -X POST -H 'Content-Type: application/yaml' --fail --data-binary @docs/B2X-Telia-Lithuania-Lead-Documents_v1.yaml "$PORTAL_PUBLISHER_TOKEN_URL"

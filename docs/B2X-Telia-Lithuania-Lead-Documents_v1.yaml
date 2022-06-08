@@ -4,10 +4,10 @@ info:
   version: '1.0.0'
   title: 'B2X_Lithuania_Lead_Documents_V1'
   description: |
-    Please explain what B2X_Lithuania_Lead_Documents_V1 provides and why to use it.
+    B2X_Lithuania_Lead_Documents_V1 used for Leading docs which generated in SAP/CRM and saved in LTDOCS for third party (couriers, etc.) extraction.
     ## Authentication
     Please explain: 
-    - How an authentication/authorization works for the B2X_Lithuania_Lead_Documents_V1? 
+    - provided seperatly for dedicated user (user/pass) 
     - List all the steps needed for using B2X_Lithuania_Lead_Documents_V1. 
     ## Examples
     ```
@@ -19,9 +19,9 @@ info:
     ![Apigee Flows](https://docs.apigee.com/api-platform/images/ProxyToBackendWithFlows_v3.png)
   
 servers:
-  - url: 'https://api-garden.teliacompany.com//B2X_Lithuania_Lead_Documents_V1,'
+  - url: 'https://api-garden.teliacompany.com/b2x-telia-lithuania-lead-documents/v1/,'
     description: Production
-  - url: 'https://{environment}.api-garden.teliacompany.com//B2X_Lithuania_Lead_Documents_V1,'
+  - url: 'https://api-garden-{environment}.teliacompany.com//b2x-telia-lithuania-lead-documents//v1//,'
     description: Development
     variables:
       environment:
@@ -30,7 +30,6 @@ servers:
         enum:
           - dev
           - test
-          - uat
 paths:
   /hello:
     get:
