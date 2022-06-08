@@ -152,11 +152,14 @@
             "isEnabled": true,
             "port": 443,
             "sSLInfo": {
-              "enabled": "true",
+              "ciphers": [],
               "clientAuthEnabled": "true",
-              "ignoreValidationErrors": "false",
+              "enabled": "true",
+              "ignoreValidationErrors": false,
+              "keyAlias": "prod.api-garden.teliacompany.com_v3",
               "keyStore": "ref://api-garden-prod-v2",
-              "keyAlias": ""
+              "protocols": [],
+              "trustStore": ""
             }
           }
           ],
