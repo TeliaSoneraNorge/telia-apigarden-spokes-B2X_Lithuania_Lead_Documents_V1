@@ -8,10 +8,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: Package proxy into a ZIP archive and send to the Deployment API
         env:
-          username: ${{ secrets.username }}
-          password: ${{ secrets.password }}
-          username_ping: ${{ secrets.username_ping }}
-          password_ping: ${{ secrets.password_ping }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          username_ping: ${{ secrets.USERNAME_PING }}
+          password_ping: ${{ secrets.PASSWORD_PING }}
           DEPLOYMENT_TOKEN: ${{ secrets.DEPLOYMENT_TOKEN }}
         run: |
           sed -i "s/{username}/$username/g" edge.json
